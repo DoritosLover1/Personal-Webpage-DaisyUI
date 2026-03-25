@@ -11,6 +11,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+* {
+  scrollbar-width: none;
+}
+
+* {
+  -ms-overflow-style: none;
+}
+
 @plugin "daisyui/theme" {
   name: "driptown";
   default: false;
@@ -44,6 +57,10 @@
   --border: 1px;
   --depth: 1;
   --noise: 1;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .noise_hover:hover {

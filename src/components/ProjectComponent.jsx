@@ -5,12 +5,6 @@ import neredeyiyelim_mainpage from "../assets/project_images/neredeyiyelim-mobil
 import neredeyiyelim_restaurantdetail from "../assets/project_images/neredeyiyelim-mobileapp/neredeyiyelim_restoranpage.jpeg";
 import neredeyiyelim_settingspage from "../assets/project_images/neredeyiyelim-mobileapp/neredeyiyelim_settingspage.jpeg";
 
-import neredeyiyelim_webpage from "../assets/project_images/neredeyiyelim-webpage/neredeyiyelim_webpage.png";
-import neredeyiyelim_webpage_aboutus from "../assets/project_images/neredeyiyelim-webpage/neredeyiyelim_webpage_aboutus.png";
-import neredeyiyelim_webpage_contact from "../assets/project_images/neredeyiyelim-webpage/neredeyiyelim_webpage_contactus.png";
-import neredeyiyelim_webpage_blog_inside from "../assets/project_images/neredeyiyelim-webpage/neredeyiyelim_webpage_blog_inside.png";
-import neredeyiyelim_webpage_blogs from "../assets/project_images/neredeyiyelim-webpage/neredeyiyelim_webpage_blogs.png";
-
 import java_password_holder1 from "../assets/project_images/java-password-holder/java_password_holder.png";
 import java_password_holder2 from "../assets/project_images/java-password-holder/java_password_holder2.png";
 import java_password_holder3 from "../assets/project_images/java-password-holder/java_password_holder3.png";
@@ -22,6 +16,13 @@ import cerrah_vinly_homepage from "../assets/project_images/web-development-proj
 import cerrah_vinly_productpage from "../assets/project_images/web-development-project/cerrah_vinly_diskpage.png";
 import cerrah_vinly_sepet from "../assets/project_images/web-development-project/cerrah_vinly_sepet.png";
 import cerrah_vinly_hero from "../assets/project_images/web-development-project/cerrah_vinly_herosection.png";
+
+import chat_application1 from "../assets/project_images/chat-application-java/chatt_application_image_1.png";
+import chat_application2 from "../assets/project_images/chat-application-java/chatt_application_image_2.png";
+import chat_application3 from "../assets/project_images/chat-application-java/chatt_application_image_3.png";
+import chat_application4 from "../assets/project_images/chat-application-java/chatt_application_image_4.png";
+import chat_application5 from "../assets/project_images/chat-application-java/chatt_application_image_5.png";
+
 
 function ProjectComponent() {
   return (
@@ -44,17 +45,6 @@ function ProjectComponent() {
           buttonLink="https://github.com/feagy/nerede-yiyelim.git" />
 
         <CardwCarousel 
-        carouselId={2} 
-          image1={neredeyiyelim_webpage} 
-          image2={neredeyiyelim_webpage_blogs} 
-          image3={neredeyiyelim_webpage_blog_inside} 
-          image4={neredeyiyelim_webpage_aboutus}
-          image5={neredeyiyelim_webpage_contact}
-          title="Neredeyiyelim Web Sitesi" 
-          description="Uygulamanın tanıltıldığı ve uygulamanın gelişimindeki olaylar için blog yazılarının paylaşıldığı modern bir web sitesi." 
-          buttonLink="https://neredeyiyelim-mobile.web.app/" />
-
-        <CardwCarousel 
         carouselId={3} 
         image1={java_password_holder1} 
         image2={java_password_holder2} 
@@ -75,6 +65,18 @@ function ProjectComponent() {
         title="Cerrah Vinly E-Ticaret Sitesi Projesi" 
         description="Vinyl plak satan bir e-ticaret sitesi. Kullanıcıların ürünleri inceleyebileceği, sepetlerine ekleyebileceği ve iletişim kurabileceği modern bir web uygulaması." 
         buttonLink="https://github.com/DoritosLover1/Web-Project/tree/main-w-backend" />
+
+        <CardwCarousel
+        carouselId={5} 
+          image1={chat_application1} 
+          image2={chat_application2} 
+          image3={chat_application3}
+          image4={chat_application4}
+          image5={chat_application5}
+          title="Chat Uygulaması" 
+          description="Kullanıcılar arasında gerçek zamanlı sohbet imkanı sunan bir chat uygulamasıdır." 
+          buttonLink="https://github.com/DoritosLover1/MyOwnChatApplication/tree/encryption-imp"
+          />
 
       </div>
     </div>

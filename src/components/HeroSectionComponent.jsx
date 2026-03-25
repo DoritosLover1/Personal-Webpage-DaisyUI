@@ -1,8 +1,8 @@
-import ihsan_image from "../assets/ihsan.jpeg";
+import ihsan_image from "../assets/ihsan.webp";
 
 function HeroSectionComponent() {
   return (
-    <div className="hero min-h-[75vh] w-full max-w-5xl bg-base-300 shadow-primary shadow-[0_6px_30px_0px] rounded-2xl border-2 border-primary px-4 sm:px-8 py-8 sm:py-12">
+    <div className=" hero min-h-[75vh] w-full max-w-5xl bg-base-300 shadow-primary shadow-[0_6px_30px_0px] rounded-2xl border-2 border-primary px-4 sm:px-8 py-8 sm:py-12">
       <div className="hero-content flex-col lg:flex-row gap-6 lg:gap-12 items-center w-full">
 
         <div className="relative group shrink-0">
@@ -11,6 +11,8 @@ function HeroSectionComponent() {
             <img
               src={ihsan_image}
               alt="İhsan Demirci"
+              loading="eager"
+              fetchpriority="high"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
             />
           </div>

@@ -1,7 +1,7 @@
 function HeaderComponent() {
   return (
-    <div>
-    <div className="navbar bg-base-100 rounded-2xl ">
+    <div className="fixed top-5 left-5 right-5 z-50">
+    <div className="navbar bg-base-100 rounded-2xl border-2 border-primary shadow-primary shadow-[0_5px_30px_0px] hover:shadow-primary/80 transition">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -12,9 +12,10 @@ function HeaderComponent() {
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content text-primary bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-            <li><a className="btn btn-ghost hover:bg-primary hover:text-primary-content">Hakkımda</a></li>
-            <li><a className="btn btn-ghost hover:bg-primary hover:text-primary-content">Projelerim</a></li>
-            <li><a className="btn btn-ghost hover:bg-primary hover:text-primary-content">Yeteneklerim</a></li>
+            <li><a href="#hakkimda" className="btn btn-ghost hover:bg-primary hover:text-primary-content">Hakkımda</a></li>
+            <li><a href="https://github.com/DoritosLover1" target="_blank" rel="noopener noreferrer" className="btn btn-ghost hover:bg-primary hover:text-primary-content">Projelerim</a></li>
+            <li><a href="#öneçıkanlar" className="btn btn-ghost hover:bg-primary hover:text-primary-content">Öne Çıkanlar</a></li>
+            <li><a href="#yeteneklerim" className="btn btn-ghost hover:bg-primary hover:text-primary-content">Yeteneklerim</a></li>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl text-primary hover:btn-primary hover:text-primary-content">İhsan DEMİRCİ</a>
@@ -22,12 +23,13 @@ function HeaderComponent() {
 
       <div className="navbar-center hidden lg:flex text-base-content font-medium">
         <ul className="menu menu-horizontal px-1 gap-x-2 text-primary">
-          <li><a className="btn btn-ghost hover:bg-primary hover:text-primary-content">Hakkımda</a></li>
+          <li><a href="#hakkimda" className="btn btn-ghost hover:bg-primary hover:text-primary-content">Hakkımda</a></li>
           <li><a href="https://github.com/DoritosLover1" target="_blank" rel="noopener noreferrer" className="btn btn-ghost hover:bg-primary hover:text-primary-content">
               Projelerim
             </a>
           </li>
-          <li><a className="btn btn-ghost hover:bg-primary hover:text-primary-content">Yeteneklerim</a></li>
+          <li><a href="#öneçıkanlar" className="btn btn-ghost hover:bg-primary hover:text-primary-content">Öne Çıkanlar</a></li>
+          <li><a href="#yeteneklerim" className="btn btn-ghost hover:bg-primary hover:text-primary-content">Yeteneklerim</a></li>
         </ul>
       </div>
 
@@ -35,6 +37,7 @@ function HeaderComponent() {
         <a className="btn btn-ghost text-error hover:btn-error hover:text-error-content">İletişim</a>
       </div>
     </div>
+
     </div>
   );
 }

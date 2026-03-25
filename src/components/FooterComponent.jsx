@@ -62,7 +62,6 @@ function FooterComponent() {
               © {new Date().getFullYear()} İhsan DEMİRCİ. Tüm hakları saklıdır.
             </p>
           </div>
-
         </div>
       </div>
     </footer>
