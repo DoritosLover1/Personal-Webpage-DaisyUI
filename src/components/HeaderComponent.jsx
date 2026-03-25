@@ -34,7 +34,7 @@ function HeaderComponent() {
       </div>
 
       <div className="navbar-end font-medium">
-        <a className="btn btn-ghost text-error hover:btn-error hover:text-error-content">İletişim</a>
+        <a href={"https://www.linkedin.com/in/ihsan-demirci-408846335/"} target="_blank" rel="noopener noreferrer" className="btn btn-ghost text-error hover:btn-error hover:text-error-content">İletişim</a>
       </div>
     </div>
 

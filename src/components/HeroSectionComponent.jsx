@@ -45,12 +45,21 @@ function HeroSectionComponent() {
           </div>
 
           <div className="flex flex-wrap items-center gap-4 pt-2">
-            <button className="btn btn-primary rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+            <a
+              href={"https://github.com/DoritosLover1"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform"
+            >
               Projelerimi Gör
-            </button>
-            <button className="btn btn-outline btn-primary rounded-xl font-bold hover:scale-105 transition-transform">
+            </a>
+            <a 
+              href={"https://www.linkedin.com/in/ihsan-demirci-408846335/"} 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline btn-primary rounded-xl font-bold hover:scale-105 transition-transform">
               Bana Ulaşın
-            </button>
+            </a>
           </div>
 
         </div>
