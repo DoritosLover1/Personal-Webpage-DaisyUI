@@ -1,70 +1,155 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
- 
-  background-color: oklch(98% 0.001 106.423);
+@import "tailwindcss";
+@plugin "daisyui";
 
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Smooth Scrolling with Sticky Nav Offset */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+/* Custom Display Fonts */
+.font-display {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Text Selection */
+::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+/* Accessible Focus Indicators */
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 3px;
+  border-radius: 0.375rem;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle, Modern Scrollbars */
 ::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
+  width: 8px;
+  height: 8px;
 }
 
-* {
-  scrollbar-width: none;
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-* {
-  -ms-overflow-style: none;
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.7);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(51, 65, 85, 0.6);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 0.9);
+}
+
+/* Glassmorphism & Elevation Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .glass-panel {
+  background: rgba(17, 24, 39, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 41, 59, 0.7);
+}
+
+/* Card Subtle Border Glow on Hover */
+.card-hover-glow {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-glow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08);
+}
+
+.dark .card-hover-glow:hover {
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.5), 0 0 15px -3px rgba(59, 130, 246, 0.15);
+}
+
+/* DaisyUI Theme Configurations (Light & Dark) */
 @plugin "daisyui/theme" {
-  name: "driptown";
+  name: "light";
   default: false;
   prefersdark: false;
   color-scheme: "light";
-  --color-base-100: oklch(98% 0.001 106.423);
-  --color-base-200: oklch(97% 0.001 106.424);
-  --color-base-300: oklch(92% 0.003 48.717);
-  --color-base-content: oklch(21% 0.006 56.043);
-  --color-primary: oklch(62% 0.214 259.815);
-  --color-primary-content: oklch(97% 0.014 254.604);
-  --color-secondary: oklch(63% 0.237 25.331);
-  --color-secondary-content: oklch(97% 0.013 17.38);
-  --color-accent: oklch(58% 0.233 277.117);
-  --color-accent-content: oklch(96% 0.018 272.314);
-  --color-neutral: oklch(14% 0.004 49.25);
-  --color-neutral-content: oklch(98% 0.001 106.423);
-  --color-info: oklch(60% 0.126 221.723);
-  --color-info-content: oklch(98% 0.019 200.873);
-  --color-success: oklch(62% 0.194 149.214);
-  --color-success-content: oklch(98% 0.018 155.826);
-  --color-warning: oklch(66% 0.179 58.318);
-  --color-warning-content: oklch(98% 0.022 95.277);
-  --color-error: oklch(58% 0.253 17.585);
-  --color-error-content: oklch(96% 0.015 12.422);
-  --radius-selector: 0.25rem;
+  --color-base-100: oklch(99% 0.002 240);       /* Clean #F8FAFC */
+  --color-base-200: oklch(96% 0.005 240);       /* Soft Slate #F1F5F9 */
+  --color-base-300: oklch(100% 0 0);            /* Card Surface #FFFFFF */
+  --color-base-content: oklch(20% 0.02 260);     /* Slate 900 #0F172A */
+  --color-primary: oklch(52% 0.22 255);          /* Royal Cobalt #2563EB */
+  --color-primary-content: oklch(99% 0 0);
+  --color-secondary: oklch(50% 0.05 255);        /* Slate 600 #475569 */
+  --color-secondary-content: oklch(99% 0 0);
+  --color-accent: oklch(65% 0.18 160);           /* Emerald #10B981 */
+  --color-accent-content: oklch(99% 0 0);
+  --color-neutral: oklch(22% 0.02 260);
+  --color-neutral-content: oklch(98% 0 0);
+  --radius-selector: 0.5rem;
   --radius-field: 0.5rem;
-  --radius-box: 0.5rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-  --border: 1px;
-  --depth: 1;
-  --noise: 1;
+  --radius-box: 1rem;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-.noise_hover:hover {
-  background-color: hsl(var(--info));
-  color: hsl(var(--base-100));
-  transition: all 0.3s ease;
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+  prefersdark: true;
+  color-scheme: "dark";
+  --color-base-100: oklch(14% 0.02 260);        /* Deep Obsidian #0B0F19 */
+  --color-base-200: oklch(18% 0.025 260);       /* Dark Slate #111827 */
+  --color-base-300: oklch(22% 0.03 260);        /* Card Slate #162032 */
+  --color-base-content: oklch(95% 0.01 260);    /* Pure Slate #F8FAFC */
+  --color-primary: oklch(62% 0.20 255);          /* Electric Sapphire #3B82F6 */
+  --color-primary-content: oklch(99% 0 0);
+  --color-secondary: oklch(60% 0.18 270);        /* Indigo #6366F1 */
+  --color-secondary-content: oklch(99% 0 0);
+  --color-accent: oklch(68% 0.19 160);           /* Emerald #10B981 */
+  --color-accent-content: oklch(12% 0.02 160);
+  --color-neutral: oklch(18% 0.02 260);
+  --color-neutral-content: oklch(98% 0 0);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
 }
