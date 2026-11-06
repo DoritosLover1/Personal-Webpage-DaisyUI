@@ -48,6 +48,18 @@ export default function Hero() {
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-normal leading-relaxed pt-1">
               {personalData.tagline}
             </p>
+
+            {/* Target Career Roles Pills */}
+            <div className="flex flex-wrap gap-2 pt-1">
+              {personalData.targetRoles && personalData.targetRoles.map((role) => (
+                <span
+                  key={role}
+                  className="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 text-xs font-medium border border-slate-200/80 dark:border-slate-700"
+                >
+                  ✓ {role}
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* Action Buttons */}
