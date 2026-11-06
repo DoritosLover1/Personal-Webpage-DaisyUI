@@ -37,16 +37,15 @@ export const personalData = {
     "Yazılım Geliştirme & Mühendisliği",
     "Veri Tabanı Mimarisi & Yönetimi",
     "Ağ & Sistem Mimarisi",
-    "BT Müfettişliği & Denetimi",
+    "Bilgi Teknolojileri Müfettişliği & Denetimi",
   ],
   location: "İstanbul, Türkiye",
-  tagline: "Yazılım mimarileri, kurumsal veri tabanları, ağ güvenliği ve BT denetimi alanlarında katma değer üretiyorum.",
-  bio: "İstanbul Üniversitesi-Cerrahpaşa Bilgisayar Mühendisliği bölümünden başarıyla mezun oldum. Kurumsal bankacılık stajı (Halkbank) ve akademik eğitimim süresince; arka uç yazılım sistemleri, ilişkisel veri tabanları, ağ mimarileri ve BT denetim/müfettişlik standartları üzerine odaklandım. Sistem bütünlüğü, veri güvenliği ve analitik problem çözme ilkeleriyle kariyerime yön veriyorum.",
+  tagline: "Yazılım mimarileri, kurumsal veri tabanları, ağ mimarisi ve siber güvenlik alanlarında kendimi geliştirmeye odaklanıyorum.",
+  bio: "İstanbul Üniversitesi-Cerrahpaşa Bilgisayar Mühendisliği bölümünden başarıyla mezun oldum. Kurumsal bankacılık stajı (Halkbank) ve akademik eğitimim boyunca; yazılım mimarileri, arakatman teknolojileri ,ilişkisel veri tabanları ve ağ mimarileri üzerine çeşitli projeler geliştirerek kendimi geliştirmeye odaklandım. Bununla beraberinde hâlâ da öğrenmeye devam ediyorum.",
   stats: [
     { label: "Kurumsal Deneyim", value: "Halkbank Stajı" },
     { label: "Eğitim", value: "İÜ Cerrahpaşa Mezunu" },
-    { label: "Uzmanlık Alanları", value: "Yazılım & Veri Tabanı" },
-    { label: "Sertifika", value: "Cisco CyberOps" },
+    { label: "Sertifika", value: "Cisco CyberOps Associate and Networking (CCNA-1)" },
   ],
 };
 
@@ -64,6 +63,8 @@ export const projectCategories = [
   "Mobil",
   "Sistem & Güvenlik",
   "Finans & Backend",
+  "Mobil & Sistem",
+  "Konuşma Uygulaması"
 ];
 
 export const projectsData = [
@@ -110,8 +111,8 @@ export const projectsData = [
     title: "İSPARK Otopark & Harita Sistemi",
     shortDescription: "İstanbul otopark doluluk oranlarını ve konum verilerini harita üzerinde interaktif olarak işleyen veri yönetim projesi.",
     fullDescription: "İBB Açık Veri Portalı İSPARK API verilerini kullanarak İstanbul genelindeki otoparkların anlık kapasite, doluluk oranı ve konum bilgilerini görselleştiren ve filtreleyen harita tabanlı sistem.",
-    category: "Sistem & Güvenlik",
-    technologies: ["Node.js", "JavaScript", "İBB Open Data API", "Map Integration", "Data Processing"],
+    category: "Mobil & Sistem",
+    technologies: ["Supabase", "Flutter", "İBB Open Data API", "Map Integration", "Data Processing"],
     githubUrl: "https://github.com/DoritosLover1/ispark-kmt-project",
     featured: true,
     images: [],
@@ -170,7 +171,7 @@ export const projectsData = [
     title: "Gerçek Zamanlı Şifreli Chat",
     shortDescription: "Uçtan uca mesaj şifreleme ve soket programlama ile çoklu istemci desteği sağlayan Java sohbet sistemi.",
     fullDescription: "Ağ programlama ilkeleri kullanılarak geliştirilmiş, çok kanallı (multi-threaded) istemci-sunucu sohbet platformu. Mesaj paketleri ağ üzerinde şifrelenerek taşınır ve anlık olarak istemcilere iletilir.",
-    category: "Sistem & Güvenlik",
+    category: "Konuşma Uygulaması",
     technologies: ["Java", "Socket Programming", "Multi-Threading", "Network Security", "Encryption"],
     githubUrl: "https://github.com/DoritosLover1/MyOwnChatApplication/tree/encryption-imp",
     featured: false,
